@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookstore</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <h1>My Bookstore</h1>
+            <div class="buttons">
+                <button onclick="window.location.href='/add-book'">New Book</button>
+                <button onclick="window.location.href='/ascending'">Highest Rated</button>
+            </div>
+        </div>
+
+        <!-- Book Items -->
+        <% for(let book of books){%>
+        <div class="book-item">
+            <img class="book-image"onclick="window.location.href='/add-book/<%= book.id %>'" src=<%= book.imageUrl %> alt="Book Cover">
+            <div class="two">
+            <div class="book-details">
+                <div class="book-title"><%= book.title %></div>
+                <div class="book-author book-description"> <%= book.author %></div>
+                <div class="book-rating">⭐ <%= book.rating %>/5</div>
+                <div class="book-description"><%= book.description %></div>
+            </div>
+            <form action="/delete-book/<%= book.id %>" method="POST">
+            <button class="exit-btn btn">&times;</button>
+            </form>
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+
+</body>
+</html>

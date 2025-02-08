@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <div class="one">
+        <div class="title-new">
+        <h1>My Bookstore</h1>
+        
+            <button class="exit-btn btn">&times;</button>
+        
+        </div>
+    <div class="form-container">
+        <!-- Left Section (Image & Description) -->
+        <div class="left-section">
+            <div class="image-box">
+                <img src="" alt="new image cover">
+            </div>
+        </div>
+
+        <!-- Right Section (Form Inputs) -->
+        <div class="form-section">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" placeholder="Enter book title">
+
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Enter author's name">
+
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" placeholder="Enter rating (1-5)" min="1" max="5" step="0.1">
+
+        </div>
+    </div>
+    <textarea class="description-box" placeholder="Enter book description"></textarea>
+    <button class="submit-btn btn">Add Book</button>
+    </div>
+
+    
+
+</body>
+</html>
